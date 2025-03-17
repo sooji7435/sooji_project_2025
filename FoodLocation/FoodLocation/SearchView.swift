@@ -16,6 +16,6 @@ struct SearchView: View {
 }
 
 #Preview {
-    Search()
+    SearchView()
 }
 

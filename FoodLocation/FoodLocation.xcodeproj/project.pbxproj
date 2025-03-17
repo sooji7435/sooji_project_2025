@@ -120,10 +120,10 @@
 				F86BEBDC2D832CD000E5B425 /* Assets.xcassets */,
 				F86BEBDD2D832CD000E5B425 /* ContentView.swift */,
 				F86BEBDE2D832CD000E5B425 /* Extension.swift */,
-				F86BEBDF2D832CD000E5B425 /* FoodLocationApp.swift */,
 				F86BEBE02D832CD000E5B425 /* LocationManager.swift */,
 				F86BEBE12D832CD000E5B425 /* SearchView.swift */,
 				F8E058DE2D8402390072B83E /* Search.swift */,
+				F86BEBDF2D832CD000E5B425 /* FoodLocationApp.swift */,
 				F86BEBEB2D832CEB00E5B425 /* FoodLocationTests */,
 				F86BEBEE2D832CEB00E5B425 /* FoodLocationUITests */,
 			);
@@ -473,6 +473,7 @@
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = me.younsu.park.FoodLocation;
@@ -503,6 +504,7 @@
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = me.younsu.park.FoodLocation;

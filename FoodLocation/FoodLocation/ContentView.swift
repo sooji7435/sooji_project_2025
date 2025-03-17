@@ -15,7 +15,8 @@ struct ContentView: View {
             span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
         )
     
-    private var locationmanager = LocationManager()
+    private let locationmanager = LocationManager()
+    private let search = Search()
     
     var body: some View {
         VStack{

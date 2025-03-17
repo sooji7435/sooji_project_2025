@@ -8,12 +8,13 @@
 import Foundation
 import MapKit
 
-class Search {
+class SearchManager: ObservableObject {
+    @Published var searchResults: [MKMapItem] = []
     
-    func search() {
+    func search(query: String, region: MKCoordinateRegion) {
         let searchRequest = MKLocalSearch.Request()
-        
-        searchRequest.naturalLanguageQuery = "coffee"
+        searchRequest.naturalLanguageQuery = query
+        searchRequest.region = region
         
         let search = MKLocalSearch(request: searchRequest)
         search.start { response, error in
@@ -21,16 +22,11 @@ class Search {
                 print("Error: \(error ?? NSError())")
                 return
             }
-            for item in response.mapItems {
-                if let name = item.name,
-                   let location = item.placemark.location {
-                    print("\(name): \(location.coordinate.latitude)m \(location.coordinate.longitude)")
-                }
+            self.searchResults = response.mapItems
+            
             }
         }
     }
-
-}
     
     
 
