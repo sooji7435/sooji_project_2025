@@ -22,12 +22,6 @@ struct BottomSheet: View {
                 
             VStack {
                 ZStack {
-                    Rectangle()
-                        .fill(Color.gray)
-                        .opacity(0.1)
-                        .frame(width: 350, height: 50)
-                        .cornerRadius(3)
-                    
                     Toggle(isOn: $isAll) {
                         ZStack {
                             Text("모두 동의합니다.")
@@ -35,21 +29,26 @@ struct BottomSheet: View {
                     }
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .toggleStyle(.checklist)
-                    .padding([.horizontal], 30)
+                    .padding([.horizontal], 10)
                     .onChange(of: isAll) {
                         isAge = isAll
                         isAllow = isAll
                     }
                 }
+                .padding([.vertical],20)
+                .background(Color(.systemGray6))
+                .cornerRadius(3)
+                .padding(.horizontal, 25)
+                
                 Toggle(isOn: $isAge) {
-                    Text("[필수] 만 14세 이상")
+                    Text(" [필수] 만 14세 이상")
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .toggleStyle(.checklist)
                 .padding([.top, .horizontal], 20)
                 
                 Toggle(isOn: $isAllow) {
-                    Text("[필수] 만 14세 이상")
+                    Text(" [필수] 만 14세 이상")
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .toggleStyle(.checklist)
@@ -59,10 +58,8 @@ struct BottomSheet: View {
                 Button(action:{}) {
                     ZStack {
                         if isAge && isAllow {
-                            Rectangle()
-                                .fill(Color.black)
-                                .frame(width: 350, height: 50)
-                                .cornerRadius(3)
+                            
+                            background()
                             
                             Text("약관 동의하기")
                                 .foregroundColor(Color.white)
@@ -77,13 +74,13 @@ struct BottomSheet: View {
                                 .foregroundColor(Color.white)
                         }
                         else {
-                            Rectangle()
-                                .fill(Color.gray)
-                                .frame(width: 350, height: 50)
-                                .opacity(0.4)
-                            
                             Text("약관 동의하기")
+                                .frame(maxWidth: .infinity, maxHeight: 60, alignment: .center)
                                 .foregroundColor(Color.gray)
+                                .background(Color(.systemGray5))
+                                .cornerRadius(3)
+                                .padding(.horizontal, 20)
+                                
                         }
                     }
                 }
