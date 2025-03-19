@@ -10,10 +10,8 @@ import SwiftUI
 struct HomeView: View {
     @State var search: String = ""
     var body: some View {
-        NavigationView {
             VStack {
                 HStack {
-                    
                     Image(systemName: "magnifyingglass")
                         .foregroundColor(.black)
                     TextField(text: $search) {
@@ -25,16 +23,25 @@ struct HomeView: View {
                         
                 }
                 .padding(10)
-                    .background(Color(.systemGray6)) // 배경색 설정
-                    .cornerRadius(2) // 모서리 둥글게
+                    .background(Color(.systemGray6))
+                    .cornerRadius(3)
                     .padding(.horizontal)
                 }
-            }
-            
-            
-            .navigationTitle("revolt")
-        }
         
+        
+        Button(action:{}) {
+            ZStack {
+                Image("certification")
+                    .resizable()
+                    .frame(width: 250, height: 350)
+                    .cornerRadius(3)
+                
+                Text("오직 전기차를 위한\n리볼트 인증 과정\n\n인증과정 보기. >")
+                    .foregroundStyle(.black)
+                
+            }
+        }
+            }
     }
 
 #Preview {

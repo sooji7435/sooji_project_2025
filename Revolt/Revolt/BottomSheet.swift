@@ -58,28 +58,29 @@ struct BottomSheet: View {
                 Button(action:{}) {
                     ZStack {
                         if isAge && isAllow {
-                            
-                            background()
-                            
                             Text("약관 동의하기")
+                                .frame(maxWidth: .infinity, maxHeight: 60)
                                 .foregroundColor(Color.white)
+                                .background(.black)
+                                .cornerRadius(3)
+                                .padding()
+                                
                         }
                         else if isAll {
-                            Rectangle()
-                                .fill(Color.black)
-                                .frame(width: 350, height: 50)
-                                .cornerRadius(3)
-                            
                             Text("약관 동의하기")
+                                .frame(maxWidth: .infinity, maxHeight: 60)
                                 .foregroundColor(Color.white)
+                                .background(.black)
+                                .cornerRadius(3)
+                                .padding()
                         }
                         else {
                             Text("약관 동의하기")
-                                .frame(maxWidth: .infinity, maxHeight: 60, alignment: .center)
-                                .foregroundColor(Color.gray)
-                                .background(Color(.systemGray5))
+                                .frame(maxWidth: .infinity, maxHeight: 60)
+                                .foregroundColor(Color.white)
+                                .background(Color(.systemGray3))
                                 .cornerRadius(3)
-                                .padding(.horizontal, 20)
+                                .padding()
                                 
                         }
                     }
