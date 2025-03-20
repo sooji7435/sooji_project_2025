@@ -47,6 +47,9 @@ struct HomeView: View {
                                     .padding()
                             }
                         }
+                        .onTapGesture {
+                            print("button touched")
+                        }
                        
                         
                         
@@ -64,6 +67,9 @@ struct HomeView: View {
                                     .padding()
                             }
                         }
+                        .onTapGesture {
+                            print("button touched")
+                        }
                         
                         Button(action:{}) {
                             ZStack(alignment: .topLeading) {
@@ -79,13 +85,14 @@ struct HomeView: View {
                                     .padding()
                             }
                         }
+                        .onTapGesture {
+                            print("button touched")
+                        }
                     }
                     
                 }
             }
-            .onTapGesture {
-                
-            }
+            
             .navigationTitle(Text("revolt"))
         }
     }
