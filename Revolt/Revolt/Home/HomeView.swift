@@ -21,10 +21,10 @@ struct HomeView: View {
                     VStack {
                         HStack {
                             Image(systemName: "magnifyingglass")
-                                .foregroundColor(.black)
+                                .foregroundStyle(.black)
                             TextField(text: $search) {
                                 Text("어떤 전기차를 찾으시나요?")
-                                    .foregroundColor(.black)
+                                    .foregroundStyle(.black)
                             }
                             .foregroundColor(Color.black)
                             .textFieldStyle(.plain)
