@@ -23,7 +23,7 @@ struct MyPageView: View {
                     }
                     
                     Button(action: {}) {
-                        Text("자주 묻는 질문")
+                        Text("자주 묻는 차이")
                             .font(.system(size: 15, weight: .bold, design: .default))
                             .foregroundStyle(.black)
                             .frame(maxWidth: .infinity)
@@ -32,6 +32,7 @@ struct MyPageView: View {
                             .cornerRadius(3)
                     }
                 }
+                .padding()
             }
             
             Button(action: {}) {
@@ -48,7 +49,7 @@ struct MyPageView: View {
             
             Button(action: {}) {
                 HStack {
-                    Text("찜한 차")
+                    Text("최근 본 차")
                         .foregroundStyle(.black)
                     Spacer()
                     
