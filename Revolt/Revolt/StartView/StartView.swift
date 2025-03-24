@@ -10,6 +10,8 @@ import SwiftUI
 struct StartView: View {
     @State var isShowing: Bool = false
     @State var isAll: Bool = false
+    @State var showOverlay: Bool = true
+    
     var body: some View {
         ZStack {
             Image("StartView")

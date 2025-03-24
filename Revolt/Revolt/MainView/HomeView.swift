@@ -116,14 +116,14 @@ struct HomeView: View {
                             .frame(height: 3)
                                 .background(Color.gray)
                                 .opacity(0.2)
-                                .padding(.vertical, 20)
+                                .padding(.top, 35)
                         
                         VStack(alignment: .leading, spacing: 30) {
                             Text("자주 묻는 질문")
                                 .multilineTextAlignment(.leading)
                                 .foregroundStyle(.black)
                                 .font(.system(size: 20, weight: .bold, design: .default))
-                                .padding(.vertical)
+                                .padding(.bottom)
                             
                             DisclosureGroup("헤이딜러가 만들었나요?", isExpanded: $expanded1) {
                                 Text("네, 맞습니다\n\n내차팔기 서비스 헤이딜러는 중고차 시장을 고객\n중심으로 바꿔나가고 있는데요.\n\n고객분들이 전기차를 안심하고 구입할 수 있도록\n하기 위해서 서비스를 만들었습니다.")
