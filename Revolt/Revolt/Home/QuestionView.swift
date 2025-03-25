@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct QuestionView: View {
+    @Environment(\.dismiss) var dismiss
+    
     @State var expanded1: Bool = false
     @State var expanded2: Bool = false
     @State var expanded3: Bool = false
@@ -65,9 +67,13 @@ struct QuestionView: View {
                 .navigationBarBackButtonHidden(true)
                 .toolbar {
                     ToolbarItem(placement: .topBarLeading) {
-                        Text("<")
+                        Button(action: {dismiss() }) {
+                                Image(systemName: "chevron.left")
+                                .foregroundStyle(.black)
+                        }
                     }
                 }
+            
         }
     }
 }

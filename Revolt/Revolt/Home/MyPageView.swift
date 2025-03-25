@@ -116,8 +116,6 @@ struct MyPageView: View {
                     
                 }
                     
-   
-                    
                     Image("Cloud")
                         .resizable()
                         .frame(width: 50, height: 50)
@@ -132,7 +130,6 @@ struct MyPageView: View {
             )
             
             Spacer()
-            
             
             .navigationTitle("마이페이지")
         }
