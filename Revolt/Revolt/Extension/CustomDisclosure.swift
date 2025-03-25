@@ -20,6 +20,7 @@ struct CustomDisclosureStyle: DisclosureGroupStyle {
                     configuration.label
                     Spacer()
                     Image(systemName: "chevron.down") // 기본 ▼
+                        .foregroundStyle(.black)
                         .rotationEffect(.degrees(configuration.isExpanded ? -180 : 0)) // 펼치면 ▶
                         .animation(.easeInOut, value: configuration.isExpanded)
                 }

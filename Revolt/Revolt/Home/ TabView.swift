@@ -23,7 +23,7 @@ struct _Tab: View {
             }
             
             Tab("profile", systemImage: "person.circle.fill") {
-                HomeView()
+                MyPageView()
             }
         }
         .accentColor(.black)

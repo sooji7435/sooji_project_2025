@@ -12,6 +12,7 @@ struct MyPageView: View {
         NavigationStack {
             VStack {
                 HStack {
+                   
                     Button(action: {}) {
                         Text("채팅 문의")
                             .font(.system(size: 15, weight: .bold, design: .default))
@@ -22,15 +23,18 @@ struct MyPageView: View {
                             .cornerRadius(3)
                     }
                     
-                    Button(action: {}) {
-                        Text("자주 묻는 차이")
-                            .font(.system(size: 15, weight: .bold, design: .default))
-                            .foregroundStyle(.black)
-                            .frame(maxWidth: .infinity)
-                            .padding()
-                            .background(Color(.systemGray6))
-                            .cornerRadius(3)
-                    }
+                    NavigationLink(destination: QuestionView()) {
+                                Text("자주 묻는 질문")
+                                    .font(.system(size: 15, weight: .bold, design: .default))
+                                    .foregroundStyle(.black)
+                                    .frame(maxWidth: .infinity)
+                                    .padding()
+                                    .background(Color(.systemGray6))
+                                    .cornerRadius(3)
+    
+                        }
+                    
+                    
                 }
                 .padding()
             }
