@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
     @State private var isLaunch: Bool = true
     @State private var isShowingSheet: Bool = false
+    
     var body: some View {
         VStack {
             if !isLaunch {

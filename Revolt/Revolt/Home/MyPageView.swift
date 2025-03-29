@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct MyPageView: View {
+    @State var isShowing : Bool = false
+    
     var body: some View {
         NavigationStack {
             VStack {
@@ -102,7 +104,7 @@ struct MyPageView: View {
                 }
             .padding()
             
-            Button(action: {}) {
+            Button(action: { isShowing.toggle()}) {
                 HStack {
                 VStack(alignment: .leading) {
                     Text("리볼트에서의 경험은 어떠셨나요?")
@@ -132,6 +134,11 @@ struct MyPageView: View {
             Spacer()
             
             .navigationTitle("마이페이지")
+            .sheet(isPresented: $isShowing) {
+                SurveyView(isShowing: $isShowing)
+                    .presentationDetents([.fraction(0.6)])
+                    .presentationDragIndicator(.hidden)
+            }
         }
         
         
