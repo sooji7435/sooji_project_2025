@@ -18,6 +18,7 @@ struct AlertSettingView: View {
                 Text("· 찜한 차 가격이 바뀌면 알려드려요.\n· 관심 있는 모델 매물을 추천해 드려요.")
             }
             .padding()
+            .padding()
             
             Spacer()
             

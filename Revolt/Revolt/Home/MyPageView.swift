@@ -68,7 +68,7 @@ struct MyPageView: View {
             Divider()
                 .padding()
             
-            Button(action: {}) {
+            NavigationLink(destination: AlertSettingView()) {
                 HStack {
                     Text("알림 설정")
                         .foregroundStyle(.black)
@@ -92,7 +92,7 @@ struct MyPageView: View {
                 }
             .padding()
             
-            Button(action: {}) {
+            NavigationLink(destination: AppInfoView()) {
                 HStack {
                     Text("앱 정보")
                         .foregroundStyle(.black)
