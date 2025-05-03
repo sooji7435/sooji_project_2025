@@ -8,18 +8,27 @@
 import SwiftUI
 
 struct _Tab: View {
+    @State private var isLoading: Bool = true
+    @State private var selectionTab: String = "home"
+    
     var body: some View {
         TabView {
             Tab("Home", systemImage: "house") {
-                HomeView()
+                HomeView(selectedTab: $selectionTab)
+                    .tag("home")
             }
+            
             
             Tab("search", systemImage: "magnifyingglass") {
-                HomeView()
+                SearchBar()
+                
+                EVListView()
+                    .tag("search")
             }
             
+            
             Tab("favorite", systemImage: "heart.fill") {
-                HomeView()
+                MyPageView()
             }
             
             Tab("profile", systemImage: "person.circle.fill") {
@@ -27,8 +36,10 @@ struct _Tab: View {
             }
         }
         .accentColor(.black)
+
     }
 }
+
 
 #Preview {
     _Tab()

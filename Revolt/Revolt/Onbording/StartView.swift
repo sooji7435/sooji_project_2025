@@ -9,42 +9,43 @@ import SwiftUI
 
 struct StartView: View {
     @State var isShowing: Bool = false
-    @State var isAll: Bool = false
-    @State var showOverlay: Bool = true
+    @State var shouldNavigate: Bool = false
     
     var body: some View {
-        ZStack {
-            Image("StartView")
-                .resizable()
-                .ignoresSafeArea(edges: .all)
-            VStack{
-                Spacer()
-                
-                Button(action: {
-                    isShowing.toggle()
-                }){
-                    ZStack {
-                        
-                        Rectangle()
-                            .fill(Color.white)
-                            .frame(width: 300, height: 50)
-                            .cornerRadius(5)
-                        Text("시작하기  >")
-                            .foregroundColor(.black)
+        NavigationStack {
+            ZStack {
+                Image("StartView")
+                    .resizable()
+                    .ignoresSafeArea(edges: .all)
+                VStack{
+                    Spacer()
+                    
+                    Button(action: {
+                        isShowing.toggle()
+                    }){
+                        ZStack {
+                            Rectangle()
+                                .fill(Color.white)
+                                .frame(width: 300, height: 50)
+                                .cornerRadius(5)
+                            Text("시작하기  >")
+                                .foregroundColor(.black)
+                        }
                     }
                 }
             }
-            .sheet(isPresented: $isShowing) {
-                BottomSheet()
-                .presentationDetents([.medium])
-                .presentationDragIndicator(.visible)
+                .sheet(isPresented: $isShowing) {
+                    BottomSheet(isShow: $isShowing, shouldNavigate: $shouldNavigate)
+                        .presentationDetents([.medium])
+                        .presentationDragIndicator(.visible)
+                }
+                .navigationDestination(isPresented: $shouldNavigate) {
+                    _Tab()
+                }
+                
             }
-            
         }
-        
-        
     }
-}
 
 #Preview {
     StartView()
