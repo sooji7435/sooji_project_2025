@@ -33,10 +33,7 @@ struct MyPageView: View {
                                     .padding()
                                     .background(Color(.systemGray6))
                                     .cornerRadius(3)
-    
                         }
-                    
-                    
                 }
                 .padding()
             }
@@ -107,7 +104,7 @@ struct MyPageView: View {
             Button(action: { isShowing.toggle()}) {
                 HStack {
                 VStack(alignment: .leading) {
-                    Text("리볼트에서의 경험은 어떠셨나요?")
+                    Text("EVCar에서의 경험은 어떠셨나요?")
                         .foregroundStyle(.black)
                         .font(.system(size: 14, weight: .bold))
                     
