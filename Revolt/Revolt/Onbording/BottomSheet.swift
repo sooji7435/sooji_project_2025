@@ -83,10 +83,7 @@ struct BottomSheet: View {
                         }
                     }
                 }
-                .offset(x: 0, y: 50)
-            }
-            
-            
+            } 
         }
     }
 }
