@@ -6,30 +6,29 @@ struct EVDetailView: View {
     var body: some View {
         Form {
             Section(header: Text("기본 정보")) {
-                Text("VIN: \(record.vin)")
-                Text("제조사: \(record.make)")
+                Text("제조사: \(record.manufacturer)")
                 Text("모델: \(record.model)")
-                Text("연식: \(record.modelYear)")
-                Text("차량 유형: \(record.vehicleType)")
+                Text("연식: \(record.year)")
+                Text("차량 유형: \(record.marque)")
             }
 
             Section(header: Text("주행 정보")) {
-                Text("전기 주행 거리: \(record.rangeMiles) 마일")
-                Text("CAFV 적격 여부: \(record.fuelEligibility)")
+                Text("바디 스타일: \(record.bodystyle) 마일")
+                Text("플렛폼: \(record.platform)")
             }
 
             Section(header: Text("위치 정보")) {
-                Text("지역: \(record.city), \(record.county), \(record.state) \(record.postalCode)")
-                Text("좌표: \(record.coordinates)")
+                Text("지역: \(record.platform), \(record.platform), \(record.platform) \(record.platform)")
+                Text("좌표: \(record.platform)")
             }
 
             Section(header: Text("기타")) {
-                Text("Vehicle ID: \(record.vehicleID)")
-                Text("법률 지구: \(record.legislativeDistrict)")
-                Text("FIPS 코드: \(record.fipsCode)")
-                Text("전기 공급자: \(record.jurisdictions)")
+                Text("Vehicle ID: \(record.platform)")
+                Text("법률 지구: \(record.platform)")
+                Text("FIPS 코드: \(record.platform)")
+                Text("전기 공급자: \(record.platform)")
             }
         }
-        .navigationTitle("\(record.make) \(record.model)")
+        .navigationTitle("\(record.model) \(record.model)")
     }
 }

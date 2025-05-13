@@ -2,68 +2,40 @@ import Foundation
 
 // EVRecord 구조체 정의
 struct EVRecord: Identifiable, Codable {
-    let vin: String
-    let county: String
-    let city: String
-    let state: String
-    let postalCode: String
-    let modelYear: String
-    let make: String
     let model: String
-    let vehicleType: String
-    let fuelEligibility: String
-    let rangeMiles: String
-    let baseMSRP: String
-    let legislativeDistrict: String
-    let vehicleID: String
-    let coordinates: String
-    let jurisdictions: String
-    let fipsCode: String
-
-    var id: String { vin }
-
+    let year: String
+    let bodystyle: String
+    let platform: String
+    let battery: String
+    let manufacturer: String
+    let marque: String
+    
+    var id: UUID
+    
     enum CodingKeys: String, CodingKey {
-        case vin = "VIN (1-10)"
-        case county = "County"
-        case city = "City"
-        case state = "State"
-        case postalCode = "Postal Code"
-        case modelYear = "Model Year"
-        case make = "Make"
-        case model = "Model"
-        case vehicleType = "Electric Vehicle Type"
-        case fuelEligibility = "Clean Alternative Fuel Vehicle (CAFV) Eligibility"
-        case rangeMiles = "Electric Range"
-        case baseMSRP = "Base MSRP"
-        case legislativeDistrict = "Legislative District"
-        case vehicleID = "DOL Vehicle ID"
-        case coordinates = "Vehicle Location"
-        case jurisdictions = "Electric Utility"
-        case fipsCode = "2020 Census Tract"
-    }
+            case model = "Model"
+            case year = "Calendar year\nproduced"
+            case bodystyle = "Body style"
+            case platform = "Platform"
+            case battery = "Dedicated battery\nelectric vehicle?[nb 1]"
+            case manufacturer = "Manufacturer"
+            case marque = "Marque origin"
+        }
     
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
 
-        vin = try container.decodeLosslessString(forKey: .vin)
-        county = try container.decodeLosslessString(forKey: .county)
-        city = try container.decodeLosslessString(forKey: .city)
-        state = try container.decodeLosslessString(forKey: .state)
-        postalCode = try container.decodeLosslessString(forKey: .postalCode)
-        modelYear = try container.decodeLosslessString(forKey: .modelYear)
-        make = try container.decodeLosslessString(forKey: .make)
+        id = UUID()
+        
         model = try container.decodeLosslessString(forKey: .model)
-        vehicleType = try container.decodeLosslessString(forKey: .vehicleType)
-        fuelEligibility = try container.decodeLosslessString(forKey: .fuelEligibility)
-        rangeMiles = try container.decodeLosslessString(forKey: .rangeMiles)
-        baseMSRP = try container.decodeLosslessString(forKey: .baseMSRP)
-        legislativeDistrict = try container.decodeLosslessString(forKey: .legislativeDistrict)
-        vehicleID = try container.decodeLosslessString(forKey: .vehicleID)
-        coordinates = try container.decodeLosslessString(forKey: .coordinates)
-        jurisdictions = try container.decodeLosslessString(forKey: .jurisdictions)
-        fipsCode = try container.decodeLosslessString(forKey: .fipsCode)
+        year = try container.decodeLosslessString(forKey: .year)
+        bodystyle = try container.decodeLosslessString(forKey: .bodystyle)
+        platform = try container.decodeLosslessString(forKey: .platform)
+        battery = try container.decodeLosslessString(forKey: .battery)
+        manufacturer = try container.decodeLosslessString(forKey: .manufacturer)
+        marque = try container.decodeLosslessString(forKey: .marque)
     }
-
+    
 }
 
 extension KeyedDecodingContainer {
@@ -86,55 +58,36 @@ extension KeyedDecodingContainer {
     }
 }
 
-
-func loadJSONInChunks(from jsonName: String, chunkSize: Int = 1000, onChunk: @escaping ([EVRecord]) -> Void, onFinish: @escaping () -> Void) {
-    DispatchQueue.global(qos: .userInitiated).async {
-        print("🔍 [loadJSONInChunks] Trying to load JSON file: \(jsonName).json")
-        
-        guard let fileURL = Bundle.main.url(forResource: jsonName, withExtension: "json"),
+class Load: ObservableObject {
+    @Published var records: [EVRecord] = []
+    @Published var isLoading: Bool = true
+    @Published var likedIDs: Set<String> = []
+    
+    init() {
+        loadEVData()
+    }
+    
+    // JSON 데이터 로딩 함수
+    func loadEVData() {
+        // JSON 파일 로드
+        guard let fileURL = Bundle.main.url(forResource: "list", withExtension: "json"),
               let data = try? Data(contentsOf: fileURL) else {
-            print("❌ [loadJSONInChunks] Failed to load file or data")
-            DispatchQueue.main.async {
-                onChunk([])
-                onFinish()
-            }
+            print("❌ 파일을 찾을 수 없습니다.")
+            isLoading = false
             return
         }
-
+        
         do {
             let decoder = JSONDecoder()
-            let allRecords = try decoder.decode([EVRecord].self, from: data)
-            print("✅ [loadJSONInChunks] Successfully decoded \(allRecords.count) records")
-
-            var chunk: [EVRecord] = []
-
-            for (index, record) in allRecords.enumerated() {
-                chunk.append(record)
-
-                if chunk.count == chunkSize || index == allRecords.count - 1 {
-                    let toSend = chunk
-                    chunk = []
-
-                    DispatchQueue.main.async {
-                        print("📦 Sending chunk of size: \(toSend.count)")
-                        onChunk(toSend)
-                    }
-
-                    usleep(10000) // 10ms 지연
-                }
-            }
-
-            DispatchQueue.main.async {
-                print("🏁 Finished loading all chunks")
-                onFinish()
-            }
+            // JSON 데이터를 디코딩하여 records 배열에 저장
+            records = try decoder.decode([EVRecord].self, from: data)
+            print("✅ 데이터 로딩 완료: \(records.count) 개의 전기차")
         } catch {
-            print("❌ [loadJSONInChunks] JSON decoding error: \(error)")
-            DispatchQueue.main.async {
-                onChunk([])
-                onFinish()
-            }
+            print("❌ JSON 디코딩 실패: \(error)")
         }
+        
+        isLoading = false
     }
 }
+
 

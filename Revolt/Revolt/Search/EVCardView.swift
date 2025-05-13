@@ -12,19 +12,21 @@ struct EVCardView: View {
     @Binding var likedIDs: Set<String>
 
     var isLiked: Bool {
-        likedIDs.contains(record.id)
+        likedIDs.contains(record.id.uuidString)
     }
-
+    
+    var onLikeChanged: () -> Void
+    
     var body: some View {
         HStack {
             VStack(alignment: .leading, spacing: 8) {
-                Text("\(record.make) \(record.model)")
+                Text("\(record.model) \(record.model)")
                     .font(.title3)
                     .fontWeight(.semibold)
                     .foregroundStyle(.black)
                     .lineLimit(1)
                 
-                Text("연식: \(record.modelYear) • \(record.city), \(record.state)")
+                Text("연식: \(record.year)")
                     .font(.subheadline)
                     .foregroundStyle(.black)
                     .lineLimit(1)
@@ -33,10 +35,11 @@ struct EVCardView: View {
 
             Button(action: {
                 if isLiked {
-                    likedIDs.remove(record.id)
+                    likedIDs.remove(record.id.uuidString)
                 } else {
-                    likedIDs.insert(record.id)
+                    likedIDs.insert(record.id.uuidString)
                 }
+                onLikeChanged()
             }) {
                 Image(systemName: isLiked ? "heart.fill" : "heart")
                     .resizable()
