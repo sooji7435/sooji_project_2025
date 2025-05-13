@@ -34,22 +34,9 @@
 		F87EFE6D2D883DDD001E5A73 /* RevoltUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RevoltUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		F84F0A6F2DBFB7C700A5FA25 /* Exceptions for "Revolt" folder in "Revolt" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Electric_Vehicle_Population_Data.csv,
-			);
-			target = F87EFE522D883DDC001E5A73 /* Revolt */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		F87EFE552D883DDC001E5A73 /* Revolt */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				F84F0A6F2DBFB7C700A5FA25 /* Exceptions for "Revolt" folder in "Revolt" target */,
-			);
 			path = Revolt;
 			sourceTree = "<group>";
 		};

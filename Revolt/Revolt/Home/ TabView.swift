@@ -26,7 +26,7 @@ struct _Tab: View {
                     Label("Search", systemImage: "magnifyingglass")
                 }
 
-            MyPageView()
+            FavoriteView(viewModel: viewModel, evrecord: viewModel.records)
                 .tag("favorite")
                 .tabItem {
                     Label("Favorite", systemImage: "heart.fill")
