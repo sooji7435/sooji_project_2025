@@ -2,16 +2,18 @@ import SwiftUI
 
 struct HomeView: View {
     @FocusState private var isFocused: Bool
-    @Binding var searchText: String
+    @ObservedObject private var viewModel = Load()
+    
+    
     var body: some View {
         NavigationStack {
                 VStack {
-                    SearchBar(searchText: $searchText)
+                    SearchBar(searchText: $viewModel.searchText)
                         .padding()
                         .focused($isFocused)
                     
                     if isFocused {
-                        EVListView(searchText: $searchText)
+                        EVListView(viewModel: viewModel, searchText: $viewModel.searchText)
                        
                     } else {
                         ScrollView {
@@ -25,9 +27,9 @@ struct HomeView: View {
                             
                             QuestionView()
                         }
+                        .onTapGesture { isFocused = false }
                     }
                 }
-                .onTapGesture { isFocused = false }
                 .animation(.spring(), value: isFocused)
                 .navigationTitle(isFocused ? "" : "EVCar")
                 .navigationBarBackButtonHidden(true)
@@ -36,7 +38,7 @@ struct HomeView: View {
 }
 
 #Preview {
-    HomeView(searchText: .constant(""))
+    HomeView()
 }
 
 

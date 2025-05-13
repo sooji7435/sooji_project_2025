@@ -63,7 +63,11 @@ class Load: ObservableObject {
     @Published var isLoading: Bool = true
     @Published var likedIDs: Set<String> = []
     
-    @Published var searchText: String = ""
+    @Published var searchText: String = "" {
+        didSet {
+            print("검색어 변경")
+        }
+    }
     @Published var selectedManufacturer: String = "전체"
     @Published var selectedBodyStyle: String = "전체"
     @Published var selectedYear: String = "전체"

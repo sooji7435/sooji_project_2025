@@ -2,15 +2,12 @@ import SwiftUI
 import CoreML
 
 struct EVListView: View {
-    @StateObject private var viewModel = Load()
+    @ObservedObject var viewModel: Load
     @Binding var searchText: String
     
     var body: some View {
         NavigationStack {
-            VStack {
-                SearchBar(searchText: $viewModel.searchText)
-                    .padding()
-                
+            VStack {                
                 FilterView(viewModel: viewModel)
 
                 Divider()
@@ -38,8 +35,4 @@ struct EVListView: View {
             .navigationBarTitleDisplayMode(.inline)
         }
     }
-}
-
-#Preview {
-    EVListView(searchText: .constant(""))
 }

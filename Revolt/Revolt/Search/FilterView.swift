@@ -53,7 +53,8 @@ struct FilterLabel: View {
             .font(.subheadline)
             .padding(.horizontal, 12)
             .padding(.vertical, 8)
-            .background(Color(.systemGray6))
+            .foregroundStyle(.black)
+            .background(.white)
             .cornerRadius(12)
             .overlay(
                 RoundedRectangle(cornerRadius: 12)
