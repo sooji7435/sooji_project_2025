@@ -2,21 +2,16 @@ import SwiftUI
 
 struct HomeView: View {
     @FocusState private var isFocused: Bool
-    @Binding var selectedTab: String
-    
+    @Binding var searchText: String
     var body: some View {
         NavigationStack {
                 VStack {
-                    SearchBar()
+                    SearchBar(searchText: $searchText)
+                        .padding()
                         .focused($isFocused)
-                        .onTapGesture {
-                            selectedTab = "search"
-                        }
                     
                     if isFocused {
-                        
-                        EVListView()
-                        
+                        EVListView(searchText: $searchText)
                        
                     } else {
                         ScrollView {
@@ -39,10 +34,10 @@ struct HomeView: View {
             }
     }
 }
-#Preview {
-    HomeView(selectedTab: .constant(""))
-}
 
+#Preview {
+    HomeView(searchText: .constant(""))
+}
 
 
 

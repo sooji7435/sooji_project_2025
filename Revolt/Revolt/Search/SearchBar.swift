@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SearchBar: View {
-    @State var search: String = ""
+    @Binding var searchText: String
     
     var body: some View {
         HStack {
@@ -16,7 +16,7 @@ struct SearchBar: View {
                 .padding()
                 .foregroundStyle(.black)
             
-            TextField(text: $search) {
+            TextField(text: $searchText) {
                 Text("어떤 전기차를 찾으시나요?")
                     .foregroundStyle(.black)
         }
@@ -27,12 +27,7 @@ struct SearchBar: View {
         }
         .background(Color(.systemGray6))
         .cornerRadius(3)
-        .padding(.horizontal)
-        .padding(.bottom, 40)
-        .padding(.top)
     }
 }
 
-#Preview {
-    SearchBar()
-}
+

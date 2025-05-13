@@ -63,6 +63,49 @@ class Load: ObservableObject {
     @Published var isLoading: Bool = true
     @Published var likedIDs: Set<String> = []
     
+    @Published var searchText: String = ""
+    @Published var selectedManufacturer: String = "전체"
+    @Published var selectedBodyStyle: String = "전체"
+    @Published var selectedYear: String = "전체"
+
+    
+    var filteredRecords: [EVRecord] {
+        // 검색어가 비어 있으면 필터만 적용
+        if searchText.isEmpty {
+            return records.filter { record in
+                let matchesManufacturer = selectedManufacturer == "전체" || record.manufacturer == selectedManufacturer
+                let matchesBodyStyle = selectedBodyStyle == "전체" || record.bodystyle == selectedBodyStyle
+                let matchesYear = selectedYear == "전체" || record.year == selectedYear
+                
+                return matchesManufacturer && matchesBodyStyle && matchesYear
+            }
+        } else {
+            // 검색어가 있을 경우, 필터 조건을 적용
+            return records.filter { record in
+                let matchesManufacturer = selectedManufacturer == "전체" || record.manufacturer == selectedManufacturer
+                let matchesBodyStyle = selectedBodyStyle == "전체" || record.bodystyle == selectedBodyStyle
+                let matchesYear = selectedYear == "전체" || record.year == selectedYear
+                
+                let trimmedSearch = searchText.trimmingCharacters(in: .whitespacesAndNewlines).lowercased()
+                let matchesSearch = record.model.lowercased().contains(trimmedSearch) || record.manufacturer.lowercased().contains(trimmedSearch)
+                
+                return matchesManufacturer && matchesBodyStyle && matchesYear && matchesSearch
+            }
+        }
+    }
+    
+    var allManufacturers: [String] {
+            ["전체"] + Array(Set(records.map { $0.manufacturer })).sorted()
+        }
+
+        var allBodyStyles: [String] {
+            ["전체"] + Array(Set(records.map { $0.bodystyle })).sorted()
+        }
+
+        var allYears: [String] {
+            ["전체"] + Array(Set(records.map { $0.year })).sorted()
+        }
+    
     init() {
         loadEVData()
     }

@@ -8,21 +8,22 @@
 import SwiftUI
 
 struct _Tab: View {
-    @State private var isLoading: Bool = true
     @State private var selectionTab: String = "home"
+    @State private var searchText: String = ""
     
     var body: some View {
         TabView {
             Tab("Home", systemImage: "house") {
-                HomeView(selectedTab: $selectionTab)
+                HomeView(searchText: $searchText)
                     .tag("home")
             }
             
             
             Tab("search", systemImage: "magnifyingglass") {
-                SearchBar()
+                SearchBar(searchText: $searchText)
+                    .padding()
                 
-                EVListView()
+                EVListView(searchText: $searchText)
                     .tag("search")
             }
             
