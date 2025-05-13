@@ -13,32 +13,34 @@ struct _Tab: View {
     @StateObject private var viewModel = Load()
     
     var body: some View {
-        TabView {
-            Tab("Home", systemImage: "house") {
-                HomeView()
-                    .tag("home")
-            }
+        TabView(selection: $selectionTab) {
+            HomeView(selectionTab: $selectionTab)
+                .tag("home")
+                .tabItem {
+                    Label("Home", systemImage: "house")
+                }
+
+            EVListView(viewModel: viewModel, searchText: $viewModel.searchText)
+                .tag("search")
+                .tabItem {
+                    Label("Search", systemImage: "magnifyingglass")
+                }
+
+            MyPageView()
+                .tag("favorite")
+                .tabItem {
+                    Label("Favorite", systemImage: "heart.fill")
+                }
             
-            
-            Tab("search", systemImage: "magnifyingglass") {
-                EVListView(viewModel: viewModel, searchText: $viewModel.searchText)
-                    .tag("search")
-            }
-            
-            
-            Tab("favorite", systemImage: "heart.fill") {
-                MyPageView()
-            }
-            
-            Tab("profile", systemImage: "person.circle.fill") {
-                MyPageView()
-            }
+            MyPageView()
+                .tag("profile")
+                .tabItem {
+                    Label("Profile", systemImage: "person.circle.fill")
+                }
         }
         .accentColor(.black)
-
     }
 }
-
 
 #Preview {
     _Tab()

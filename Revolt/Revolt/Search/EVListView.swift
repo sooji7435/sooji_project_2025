@@ -4,12 +4,22 @@ import CoreML
 struct EVListView: View {
     @ObservedObject var viewModel: Load
     @Binding var searchText: String
+    @State var showSearchBar: Bool = false
+    @FocusState private var isFocused: Bool
+
     
     var body: some View {
         NavigationStack {
-            VStack {                
+            VStack {
+                SearchBar(searchText: $searchText)
+                    .padding()
+                    .focused($isFocused)
+                    .onAppear {
+                        isFocused = true
+                    }
+                
                 FilterView(viewModel: viewModel)
-
+                
                 Divider()
                 
                 // MARK: - 리스트 영역
@@ -33,6 +43,8 @@ struct EVListView: View {
                 }
             }
             .navigationBarTitleDisplayMode(.inline)
+            .navigationBarBackButtonHidden(true)
+
         }
     }
 }

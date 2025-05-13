@@ -3,6 +3,7 @@ import SwiftUI
 struct HomeView: View {
     @FocusState private var isFocused: Bool
     @ObservedObject private var viewModel = Load()
+    @Binding var selectionTab: String
     
     
     var body: some View {
@@ -11,11 +12,14 @@ struct HomeView: View {
                     SearchBar(searchText: $viewModel.searchText)
                         .padding()
                         .focused($isFocused)
+                        .onChange(of: isFocused) { _, newValue in
+                            if newValue {
+                                withAnimation {
+                                    selectionTab = "search"
+                                }
+                            }
+                        }
                     
-                    if isFocused {
-                        EVListView(viewModel: viewModel, searchText: $viewModel.searchText)
-                       
-                    } else {
                         ScrollView {
                             ImageButton()
                             
@@ -28,9 +32,8 @@ struct HomeView: View {
                             QuestionView()
                         }
                         .onTapGesture { isFocused = false }
-                    }
+                    
                 }
-                .animation(.spring(), value: isFocused)
                 .navigationTitle(isFocused ? "" : "EVCar")
                 .navigationBarBackButtonHidden(true)
             }
@@ -38,8 +41,9 @@ struct HomeView: View {
 }
 
 #Preview {
-    HomeView()
+    HomeView(selectionTab: .constant(""))
 }
+
 
 
 
