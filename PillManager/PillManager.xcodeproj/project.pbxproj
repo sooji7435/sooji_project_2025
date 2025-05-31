@@ -7,62 +7,62 @@
 	objects = {
 
 /* Begin PBXContainerItemProxy section */
-		F87EFE642D883DDD001E5A73 /* PBXContainerItemProxy */ = {
+		F84155862DEAA1ED00D40A84 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = F87EFE4B2D883DDC001E5A73 /* Project object */;
+			containerPortal = F84155702DEAA1EB00D40A84 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = F87EFE522D883DDC001E5A73;
-			remoteInfo = Revolt;
+			remoteGlobalIDString = F84155772DEAA1EB00D40A84;
+			remoteInfo = PillManager;
 		};
-		F87EFE6E2D883DDD001E5A73 /* PBXContainerItemProxy */ = {
+		F84155902DEAA1ED00D40A84 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = F87EFE4B2D883DDC001E5A73 /* Project object */;
+			containerPortal = F84155702DEAA1EB00D40A84 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = F87EFE522D883DDC001E5A73;
-			remoteInfo = Revolt;
+			remoteGlobalIDString = F84155772DEAA1EB00D40A84;
+			remoteInfo = PillManager;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		F87EFE532D883DDC001E5A73 /* EVCar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EVCar.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		F87EFE632D883DDD001E5A73 /* EVCarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EVCarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F87EFE6D2D883DDD001E5A73 /* EVCarUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EVCarUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F84155782DEAA1EB00D40A84 /* PillManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PillManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F84155852DEAA1ED00D40A84 /* PillManagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PillManagerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F841558F2DEAA1ED00D40A84 /* PillManagerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PillManagerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		F87EFE552D883DDC001E5A73 /* EVCar */ = {
+		F841557A2DEAA1EB00D40A84 /* PillManager */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = EVCar;
+			path = PillManager;
 			sourceTree = "<group>";
 		};
-		F87EFE662D883DDD001E5A73 /* EVCarTests */ = {
+		F84155882DEAA1ED00D40A84 /* PillManagerTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = EVCarTests;
+			path = PillManagerTests;
 			sourceTree = "<group>";
 		};
-		F87EFE702D883DDD001E5A73 /* EVCarUITests */ = {
+		F84155922DEAA1ED00D40A84 /* PillManagerUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = EVCarUITests;
+			path = PillManagerUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		F87EFE502D883DDC001E5A73 /* Frameworks */ = {
+		F84155752DEAA1EB00D40A84 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F87EFE602D883DDD001E5A73 /* Frameworks */ = {
+		F84155822DEAA1ED00D40A84 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F87EFE6A2D883DDD001E5A73 /* Frameworks */ = {
+		F841558C2DEAA1ED00D40A84 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -72,167 +72,157 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		F87EFE4A2D883DDC001E5A73 = {
+		F841556F2DEAA1EB00D40A84 = {
 			isa = PBXGroup;
 			children = (
-				F87EFE552D883DDC001E5A73 /* EVCar */,
-				F87EFE662D883DDD001E5A73 /* EVCarTests */,
-				F87EFE702D883DDD001E5A73 /* EVCarUITests */,
-				F8FE8B222D98FB3800B8ED89 /* Frameworks */,
-				F87EFE542D883DDC001E5A73 /* Products */,
+				F841557A2DEAA1EB00D40A84 /* PillManager */,
+				F84155882DEAA1ED00D40A84 /* PillManagerTests */,
+				F84155922DEAA1ED00D40A84 /* PillManagerUITests */,
+				F84155792DEAA1EB00D40A84 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		F87EFE542D883DDC001E5A73 /* Products */ = {
+		F84155792DEAA1EB00D40A84 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F87EFE532D883DDC001E5A73 /* EVCar.app */,
-				F87EFE632D883DDD001E5A73 /* EVCarTests.xctest */,
-				F87EFE6D2D883DDD001E5A73 /* EVCarUITests.xctest */,
+				F84155782DEAA1EB00D40A84 /* PillManager.app */,
+				F84155852DEAA1ED00D40A84 /* PillManagerTests.xctest */,
+				F841558F2DEAA1ED00D40A84 /* PillManagerUITests.xctest */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		F8FE8B222D98FB3800B8ED89 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F87EFE522D883DDC001E5A73 /* EVCar */ = {
+		F84155772DEAA1EB00D40A84 /* PillManager */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F87EFE772D883DDD001E5A73 /* Build configuration list for PBXNativeTarget "EVCar" */;
+			buildConfigurationList = F84155992DEAA1ED00D40A84 /* Build configuration list for PBXNativeTarget "PillManager" */;
 			buildPhases = (
-				F87EFE4F2D883DDC001E5A73 /* Sources */,
-				F87EFE502D883DDC001E5A73 /* Frameworks */,
-				F87EFE512D883DDC001E5A73 /* Resources */,
+				F84155742DEAA1EB00D40A84 /* Sources */,
+				F84155752DEAA1EB00D40A84 /* Frameworks */,
+				F84155762DEAA1EB00D40A84 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				F87EFE552D883DDC001E5A73 /* EVCar */,
+				F841557A2DEAA1EB00D40A84 /* PillManager */,
 			);
-			name = EVCar;
+			name = PillManager;
 			packageProductDependencies = (
 			);
-			productName = Revolt;
-			productReference = F87EFE532D883DDC001E5A73 /* EVCar.app */;
+			productName = PillManager;
+			productReference = F84155782DEAA1EB00D40A84 /* PillManager.app */;
 			productType = "com.apple.product-type.application";
 		};
-		F87EFE622D883DDD001E5A73 /* EVCarTests */ = {
+		F84155842DEAA1ED00D40A84 /* PillManagerTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F87EFE7A2D883DDD001E5A73 /* Build configuration list for PBXNativeTarget "EVCarTests" */;
+			buildConfigurationList = F841559C2DEAA1ED00D40A84 /* Build configuration list for PBXNativeTarget "PillManagerTests" */;
 			buildPhases = (
-				F87EFE5F2D883DDD001E5A73 /* Sources */,
-				F87EFE602D883DDD001E5A73 /* Frameworks */,
-				F87EFE612D883DDD001E5A73 /* Resources */,
+				F84155812DEAA1ED00D40A84 /* Sources */,
+				F84155822DEAA1ED00D40A84 /* Frameworks */,
+				F84155832DEAA1ED00D40A84 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				F87EFE652D883DDD001E5A73 /* PBXTargetDependency */,
+				F84155872DEAA1ED00D40A84 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
-				F87EFE662D883DDD001E5A73 /* EVCarTests */,
+				F84155882DEAA1ED00D40A84 /* PillManagerTests */,
 			);
-			name = EVCarTests;
+			name = PillManagerTests;
 			packageProductDependencies = (
 			);
-			productName = RevoltTests;
-			productReference = F87EFE632D883DDD001E5A73 /* EVCarTests.xctest */;
+			productName = PillManagerTests;
+			productReference = F84155852DEAA1ED00D40A84 /* PillManagerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		F87EFE6C2D883DDD001E5A73 /* EVCarUITests */ = {
+		F841558E2DEAA1ED00D40A84 /* PillManagerUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F87EFE7D2D883DDD001E5A73 /* Build configuration list for PBXNativeTarget "EVCarUITests" */;
+			buildConfigurationList = F841559F2DEAA1ED00D40A84 /* Build configuration list for PBXNativeTarget "PillManagerUITests" */;
 			buildPhases = (
-				F87EFE692D883DDD001E5A73 /* Sources */,
-				F87EFE6A2D883DDD001E5A73 /* Frameworks */,
-				F87EFE6B2D883DDD001E5A73 /* Resources */,
+				F841558B2DEAA1ED00D40A84 /* Sources */,
+				F841558C2DEAA1ED00D40A84 /* Frameworks */,
+				F841558D2DEAA1ED00D40A84 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				F87EFE6F2D883DDD001E5A73 /* PBXTargetDependency */,
+				F84155912DEAA1ED00D40A84 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
-				F87EFE702D883DDD001E5A73 /* EVCarUITests */,
+				F84155922DEAA1ED00D40A84 /* PillManagerUITests */,
 			);
-			name = EVCarUITests;
+			name = PillManagerUITests;
 			packageProductDependencies = (
 			);
-			productName = RevoltUITests;
-			productReference = F87EFE6D2D883DDD001E5A73 /* EVCarUITests.xctest */;
+			productName = PillManagerUITests;
+			productReference = F841558F2DEAA1ED00D40A84 /* PillManagerUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		F87EFE4B2D883DDC001E5A73 /* Project object */ = {
+		F84155702DEAA1EB00D40A84 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1620;
-				LastUpgradeCheck = 1620;
+				LastSwiftUpdateCheck = 1640;
+				LastUpgradeCheck = 1640;
 				TargetAttributes = {
-					F87EFE522D883DDC001E5A73 = {
-						CreatedOnToolsVersion = 16.2;
+					F84155772DEAA1EB00D40A84 = {
+						CreatedOnToolsVersion = 16.4;
 					};
-					F87EFE622D883DDD001E5A73 = {
-						CreatedOnToolsVersion = 16.2;
-						TestTargetID = F87EFE522D883DDC001E5A73;
+					F84155842DEAA1ED00D40A84 = {
+						CreatedOnToolsVersion = 16.4;
+						TestTargetID = F84155772DEAA1EB00D40A84;
 					};
-					F87EFE6C2D883DDD001E5A73 = {
-						CreatedOnToolsVersion = 16.2;
-						TestTargetID = F87EFE522D883DDC001E5A73;
+					F841558E2DEAA1ED00D40A84 = {
+						CreatedOnToolsVersion = 16.4;
+						TestTargetID = F84155772DEAA1EB00D40A84;
 					};
 				};
 			};
-			buildConfigurationList = F87EFE4E2D883DDC001E5A73 /* Build configuration list for PBXProject "EVCar" */;
+			buildConfigurationList = F84155732DEAA1EB00D40A84 /* Build configuration list for PBXProject "PillManager" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = F87EFE4A2D883DDC001E5A73;
+			mainGroup = F841556F2DEAA1EB00D40A84;
 			minimizedProjectReferenceProxies = 1;
-			packageReferences = (
-			);
 			preferredProjectObjectVersion = 77;
-			productRefGroup = F87EFE542D883DDC001E5A73 /* Products */;
+			productRefGroup = F84155792DEAA1EB00D40A84 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F87EFE522D883DDC001E5A73 /* EVCar */,
-				F87EFE622D883DDD001E5A73 /* EVCarTests */,
-				F87EFE6C2D883DDD001E5A73 /* EVCarUITests */,
+				F84155772DEAA1EB00D40A84 /* PillManager */,
+				F84155842DEAA1ED00D40A84 /* PillManagerTests */,
+				F841558E2DEAA1ED00D40A84 /* PillManagerUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		F87EFE512D883DDC001E5A73 /* Resources */ = {
+		F84155762DEAA1EB00D40A84 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F87EFE612D883DDD001E5A73 /* Resources */ = {
+		F84155832DEAA1ED00D40A84 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F87EFE6B2D883DDD001E5A73 /* Resources */ = {
+		F841558D2DEAA1ED00D40A84 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -242,21 +232,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		F87EFE4F2D883DDC001E5A73 /* Sources */ = {
+		F84155742DEAA1EB00D40A84 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F87EFE5F2D883DDD001E5A73 /* Sources */ = {
+		F84155812DEAA1ED00D40A84 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F87EFE692D883DDD001E5A73 /* Sources */ = {
+		F841558B2DEAA1ED00D40A84 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -266,20 +256,20 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		F87EFE652D883DDD001E5A73 /* PBXTargetDependency */ = {
+		F84155872DEAA1ED00D40A84 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = F87EFE522D883DDC001E5A73 /* EVCar */;
-			targetProxy = F87EFE642D883DDD001E5A73 /* PBXContainerItemProxy */;
+			target = F84155772DEAA1EB00D40A84 /* PillManager */;
+			targetProxy = F84155862DEAA1ED00D40A84 /* PBXContainerItemProxy */;
 		};
-		F87EFE6F2D883DDD001E5A73 /* PBXTargetDependency */ = {
+		F84155912DEAA1ED00D40A84 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = F87EFE522D883DDC001E5A73 /* EVCar */;
-			targetProxy = F87EFE6E2D883DDD001E5A73 /* PBXContainerItemProxy */;
+			target = F84155772DEAA1EB00D40A84 /* PillManager */;
+			targetProxy = F84155902DEAA1ED00D40A84 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		F87EFE752D883DDD001E5A73 /* Debug */ = {
+		F84155972DEAA1ED00D40A84 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -331,7 +321,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -342,7 +332,7 @@
 			};
 			name = Debug;
 		};
-		F87EFE762D883DDD001E5A73 /* Release */ = {
+		F84155982DEAA1ED00D40A84 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -388,7 +378,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -398,17 +388,15 @@
 			};
 			name = Release;
 		};
-		F87EFE782D883DDD001E5A73 /* Debug */ = {
+		F841559A2DEAA1ED00D40A84 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"EVCar/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "EVCar/GoogleService-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -419,7 +407,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = me.younsu.park.EVCar;
+				PRODUCT_BUNDLE_IDENTIFIER = me.younsu.park.PillManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -427,17 +415,15 @@
 			};
 			name = Debug;
 		};
-		F87EFE792D883DDD001E5A73 /* Release */ = {
+		F841559B2DEAA1ED00D40A84 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"EVCar/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "EVCar/GoogleService-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -448,7 +434,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = me.younsu.park.EVCar;
+				PRODUCT_BUNDLE_IDENTIFIER = me.younsu.park.PillManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -456,114 +442,114 @@
 			};
 			name = Release;
 		};
-		F87EFE7B2D883DDD001E5A73 /* Debug */ = {
+		F841559D2DEAA1ED00D40A84 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = me.younsu.park.RevoltTests;
+				PRODUCT_BUNDLE_IDENTIFIER = me.younsu.park.PillManagerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Revolt.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Revolt";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PillManager.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PillManager";
 			};
 			name = Debug;
 		};
-		F87EFE7C2D883DDD001E5A73 /* Release */ = {
+		F841559E2DEAA1ED00D40A84 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = me.younsu.park.RevoltTests;
+				PRODUCT_BUNDLE_IDENTIFIER = me.younsu.park.PillManagerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Revolt.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Revolt";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PillManager.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PillManager";
 			};
 			name = Release;
 		};
-		F87EFE7E2D883DDD001E5A73 /* Debug */ = {
+		F84155A02DEAA1ED00D40A84 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = me.younsu.park.RevoltUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = me.younsu.park.PillManagerUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Revolt;
+				TEST_TARGET_NAME = PillManager;
 			};
 			name = Debug;
 		};
-		F87EFE7F2D883DDD001E5A73 /* Release */ = {
+		F84155A12DEAA1ED00D40A84 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = me.younsu.park.RevoltUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = me.younsu.park.PillManagerUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Revolt;
+				TEST_TARGET_NAME = PillManager;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F87EFE4E2D883DDC001E5A73 /* Build configuration list for PBXProject "EVCar" */ = {
+		F84155732DEAA1EB00D40A84 /* Build configuration list for PBXProject "PillManager" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F87EFE752D883DDD001E5A73 /* Debug */,
-				F87EFE762D883DDD001E5A73 /* Release */,
+				F84155972DEAA1ED00D40A84 /* Debug */,
+				F84155982DEAA1ED00D40A84 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F87EFE772D883DDD001E5A73 /* Build configuration list for PBXNativeTarget "EVCar" */ = {
+		F84155992DEAA1ED00D40A84 /* Build configuration list for PBXNativeTarget "PillManager" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F87EFE782D883DDD001E5A73 /* Debug */,
-				F87EFE792D883DDD001E5A73 /* Release */,
+				F841559A2DEAA1ED00D40A84 /* Debug */,
+				F841559B2DEAA1ED00D40A84 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F87EFE7A2D883DDD001E5A73 /* Build configuration list for PBXNativeTarget "EVCarTests" */ = {
+		F841559C2DEAA1ED00D40A84 /* Build configuration list for PBXNativeTarget "PillManagerTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F87EFE7B2D883DDD001E5A73 /* Debug */,
-				F87EFE7C2D883DDD001E5A73 /* Release */,
+				F841559D2DEAA1ED00D40A84 /* Debug */,
+				F841559E2DEAA1ED00D40A84 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F87EFE7D2D883DDD001E5A73 /* Build configuration list for PBXNativeTarget "EVCarUITests" */ = {
+		F841559F2DEAA1ED00D40A84 /* Build configuration list for PBXNativeTarget "PillManagerUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F87EFE7E2D883DDD001E5A73 /* Debug */,
-				F87EFE7F2D883DDD001E5A73 /* Release */,
+				F84155A02DEAA1ED00D40A84 /* Debug */,
+				F84155A12DEAA1ED00D40A84 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = F87EFE4B2D883DDC001E5A73 /* Project object */;
+	rootObject = F84155702DEAA1EB00D40A84 /* Project object */;
 }

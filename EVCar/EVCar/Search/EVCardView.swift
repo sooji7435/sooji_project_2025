@@ -20,13 +20,13 @@ struct EVCardView: View {
     var body: some View {
         HStack {
             VStack(alignment: .leading, spacing: 8) {
-                Text("\(record.model) \(record.model)")
+                Text("\(record.name) \(record.subtitle)")
                     .font(.title3)
                     .fontWeight(.semibold)
                     .foregroundStyle(.black)
                     .lineLimit(1)
                 
-                Text("연식: \(record.year)")
+                Text("연식: \(record.topspeed)")
                     .font(.subheadline)
                     .foregroundStyle(.black)
                     .lineLimit(1)

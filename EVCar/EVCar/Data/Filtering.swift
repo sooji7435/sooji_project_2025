@@ -14,16 +14,16 @@ class Filtering: ObservableObject {
     var sourceRecords: [EVRecord] = []
     // 검색 조건을 처리하는 함수
     private func matchesSearchCriteria(record: EVRecord) -> Bool {
-        let matchesManufacturer = selectedManufacturer == "전체" || record.manufacturer == selectedManufacturer
-        let matchesBodyStyle = selectedBodyStyle == "전체" || record.bodystyle == selectedBodyStyle
-        let matchesYear = selectedYear == "전체" || String(record.year) == selectedYear
+        let matchesManufacturer = selectedManufacturer == "전체" || record.acceleration == selectedManufacturer
+        let matchesBodyStyle = selectedBodyStyle == "전체" || record.acceleration == selectedBodyStyle
+        let matchesYear = selectedYear == "전체" || String(record.acceleration) == selectedYear
         return matchesManufacturer && matchesBodyStyle && matchesYear
     }
 
     // 검색어가 있을 때, 필터링을 위한 조건을 반환하는 함수
     private func matchesSearchTerm(record: EVRecord) -> Bool {
         let trimmedSearch = searchText.trimmingCharacters(in: .whitespacesAndNewlines).lowercased()
-        return record.model.lowercased().contains(trimmedSearch) || record.manufacturer.lowercased().contains(trimmedSearch)
+        return record.acceleration.lowercased().contains(trimmedSearch) || record.acceleration.lowercased().contains(trimmedSearch)
     }
 
     var filteredRecords: [EVRecord] {
@@ -37,15 +37,16 @@ class Filtering: ObservableObject {
     }
 
     var allManufacturers: [String] {
-        ["전체"] + Array(Set(sourceRecords.map { $0.manufacturer })).sorted()
+        ["전체"] + Array(Set(sourceRecords.map { $0.acceleration })).sorted()
     }
 
     var allBodyStyles: [String] {
-        ["전체"] + Array(Set(sourceRecords.map { $0.bodystyle })).sorted()
+        ["전체"] + Array(Set(sourceRecords.map { $0.acceleration })).sorted()
     }
 
     var allYears: [String] {
-        ["전체"] + Array(Set(sourceRecords.map { String($0.year) })).sorted()
+        ["전체"] + Array(Set(sourceRecords.map { String($0.acceleration) })).sorted()
     }
 }
+ 
 

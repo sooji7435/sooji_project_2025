@@ -1,24 +1,46 @@
 import Foundation
 
+/*
+ "Name": "Lucid Air Dream Edition P",
+ "Subtitle": "118 kWh useable battery          Available since January 2022",
+ "Acceleration": "2.7 sec",
+ "TopSpeed": "270 km/h",
+ "Range": "645 km",
+ "Efficiency": "183 Wh/km",
+ "FastChargeSpeed": "820 km/h",
+ "Drive": "All Wheel Drive",
+ "NumberofSeats": 5,
+ "PriceinGermany": "€218,000",
+ "PriceinUK": "N/A"
+ */
+
 // EVRecord 구조체 정의
 struct EVRecord: Identifiable, Codable {
     var id = UUID()
-    let model: String
-    let year: Int
-    let bodystyle: String
-    let platform: String
-    let battery: String
-    let manufacturer: String
-    let marque: String
+    let name: String
+    let subtitle: String
+    let acceleration: String
+    let topspeed: String
+    let range: String
+    let efficiency: String
+    let fastchargespeed: String
+    let drive: String
+    let numberofseats: Int
+    let priceingermany: String
+    let priceinuk: String
     
     enum CodingKeys: String, CodingKey {
-            case model = "Model"
-            case year = "Calendar year\nproduced"
-            case bodystyle = "Body style"
-            case platform = "Platform"
-            case battery = "Dedicated battery\nelectric vehicle?[nb 1]"
-            case manufacturer = "Manufacturer"
-            case marque = "Marque origin"
+        case name = "Name"
+        case subtitle = "Subtitle"
+        case acceleration = "Acceleration"
+        case topspeed = "TopSpeed"
+        case range = "Range"
+        case efficiency = "Efficiency"
+        case fastchargespeed = "FastChargeSpeed"
+        case drive = "Drive"
+        case numberofseats = "NumberofSeats"
+        case priceingermany = "PriceinGermany"
+        case priceinuk = "PriceinUK"
         }
 }
 
@@ -36,7 +58,7 @@ class Load: ObservableObject {
     // JSON 데이터 로딩 함수
     func loadEVData() {
         // JSON 파일 로드
-        guard let fileURL = Bundle.main.url(forResource: "list", withExtension: "json"),
+        guard let fileURL = Bundle.main.url(forResource: "EV_list", withExtension: "json"),
               let data = try? Data(contentsOf: fileURL) else {
             print("❌ 파일을 찾을 수 없습니다.")
             isLoading = false

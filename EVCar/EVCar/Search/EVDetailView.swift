@@ -4,9 +4,10 @@ struct EVDetailView: View {
     let record: EVRecord
 
     var body: some View {
+        /*
         Form {
             Section(header: Text("기본 정보")) {
-                Text("제조사: \(record.manufacturer)")
+                Text("제조사: \(record.acceleration)")
                 Text("모델: \(record.model)")
                 Text("연식: \(record.year)")
                 Text("차량 유형: \(record.marque)")
@@ -30,5 +31,6 @@ struct EVDetailView: View {
             }
         }
         .navigationTitle("\(record.model) \(record.model)")
+         */
     }
 }
