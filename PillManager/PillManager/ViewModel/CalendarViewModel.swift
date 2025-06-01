@@ -7,7 +7,7 @@
 
 import Foundation
 
-class CalendarViewModel {
+class CalendarViewModel: ObservableObject {
     @Published var currentDate: Date = Date()
     @Published var currentMonth: Int = 0
     

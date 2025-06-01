@@ -7,16 +7,18 @@
 
 import SwiftUI
 
-struct HomeView: View {
+struct _CalendarView: View {
     
     var body: some View {
         CalendarYearMonth()
         
         CalendarHeader()
         
+        CalendarBodyView(calendarViewModel: CalendarViewModel())
+        
     }
 }
 
 #Preview {
-    HomeView()
+    _CalendarView()
 }
