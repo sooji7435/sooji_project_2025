@@ -14,7 +14,7 @@ struct CalendarHeader: View {
         HStack {
             ForEach(weekDays, id: \.self) { day in
                 Text(day)
-                    .font(.title2)
+                    .font(Font.custom("나눔손글씨 꽃내음", size: 30))
                     .fontWeight(.semibold)
                     .frame(maxWidth: .infinity)
                     .foregroundStyle(day == "일" ? Color.red : Color.black)

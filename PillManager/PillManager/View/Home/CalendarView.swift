@@ -10,14 +10,16 @@ import SwiftUI
 struct _CalendarView: View {
     
     var body: some View {
-        CalendarYearMonth()
-        
-        CalendarHeader()
-        
-        CalendarBodyView(calendarViewModel: CalendarViewModel())
-        
-    }
+            VStack{
+                CalendarYearMonth()
+                
+                CalendarHeader()
+                
+                CalendarBodyView(calendarViewModel: CalendarViewModel())
+            }
+        }
 }
+
 
 #Preview {
     _CalendarView()
