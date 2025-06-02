@@ -9,8 +9,20 @@ import SwiftUI
 
 struct HomeView: View {
     var body: some View {
-        TextHeader()
-        _CalendarView()
+        ZStack {
+            LinearGradient(gradient: Gradient(colors: [Color.Color1, Color.white]),
+                                       startPoint: .top, endPoint: .bottom)
+                       .edgesIgnoringSafeArea(.all)
+            VStack {
+                TextHeader()
+                
+                _CalendarView()
+                
+                Spacer()
+            }
+           
+        }
+        
     }
 }
 

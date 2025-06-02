@@ -1,21 +1,18 @@
 //
-//  CalendarBodyView.swift
+//  CalendarBody.swift
 //  PillManager
 //
-//  Created by 박윤수 on 5/31/25.
+//  Created by 박윤수 on 6/3/25.
 //
 
 import SwiftUI
 
-
-struct CalendarBodyView: View {
+struct CalendarBody: View {
     @ObservedObject var calendarViewModel: CalendarViewModel
     
     private let columns = Array(repeating: GridItem(.adaptive(minimum: 40)), count: 7)
-
     
     var body: some View {
-        // 달력 그리드
         LazyVGrid(columns: columns, spacing: 10) {
             ForEach(calendarViewModel.DatesToArray(from: calendarViewModel.currentMonth)) { value in
                 Button(action: {}) {
@@ -28,10 +25,9 @@ struct CalendarBodyView: View {
             }
         }
         .padding()
-        
     }
 }
 
 #Preview {
-    CalendarBodyView(calendarViewModel: CalendarViewModel())
+    CalendarBody(calendarViewModel: CalendarViewModel())
 }
