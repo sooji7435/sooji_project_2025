@@ -10,33 +10,30 @@ import SwiftUI
 struct MainView: View {
     var body: some View {
         TabView {
-            Tab("Requests", systemImage: "paperplane") {
+            Tab("Requests", systemImage: "calendar") {
                 HomeView()
             }
 
 
-            Tab("Account", systemImage: "person.crop.circle.fill") {
+            Tab("Account", systemImage: "cross.case") {
                 EmptyView()
             }
 
 
             TabSection("Messages") {
-                Tab("Received", systemImage: "tray.and.arrow.down.fill") {
+                Tab("Received", systemImage: "bolt.heart.fill") {
                     EmptyView()
                 }
 
 
-                Tab("Sent", systemImage: "tray.and.arrow.up.fill") {
+                Tab("Sent", systemImage: "ellipsis") {
                     EmptyView()
                 }
 
-
-                Tab("Drafts", systemImage: "pencil") {
-                    EmptyView()
-                }
             }
         }
         .tabViewStyle(.sidebarAdaptable)
+        .tint(.color4)
     }
 }
 
