@@ -22,14 +22,14 @@ struct HomeView: View {
                     
                      VStack{
                          HStack{
-                             Text("My Medicine")
+                             Text("내 일정")
                                  .font(Font.custom("나눔손글씨 꽃내음", size: 30))
                                  .padding()
                              
                              Spacer()
                              
                              Button(action: {}) {
-                                 Text("show all")
+                                 Text("모두보기")
                                      .font(Font.custom("나눔손글씨 꽃내음", size: 15))
                                      .foregroundStyle(Color.gray)
                                      

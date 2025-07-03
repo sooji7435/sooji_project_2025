@@ -20,11 +20,11 @@ struct myMedicine: View {
                                 .resizable()
                                 .frame(width: 44, height: 44)
                                 .padding()
-                                .background(Color.gray.opacity(0.1))
+                                .background(Color.Color4.opacity(0.2))
                                 .clipShape(Circle())
                                 .foregroundStyle(Color.gray)
                             
-                            Text("Add new")
+                            Text("추가")
                                 .foregroundStyle(Color.gray)
                                 .font(Font.custom("나눔손글씨 맛있는체", size: 24))
                         }
@@ -32,7 +32,7 @@ struct myMedicine: View {
                     MedicineIconView()
                 }
             }
-            .navigationTitle(Text("My Medicine"))
+            .navigationTitle(Text("내 일정"))
         }
     }
 
