@@ -20,7 +20,7 @@ struct HomeView: View {
                     
                     _CalendarView()
                     
-                     VStack{
+                    VStack(spacing: -25){
                          HStack{
                              Text("내 일정")
                                  .font(Font.custom("나눔손글씨 꽃내음", size: 30))

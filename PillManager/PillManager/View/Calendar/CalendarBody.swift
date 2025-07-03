@@ -15,13 +15,14 @@ struct CalendarBody: View {
     var body: some View {
         LazyVGrid(columns: columns, spacing: 10) {
             ForEach(calendarViewModel.DatesToArray(from: calendarViewModel.currentMonth)) { value in
-                Button(action: {}) {
+                if value.day != -1 {
+                    Button(action: {}) {
                         Text("\(value.day)")
-                        .font(Font.custom("나눔손글씨 꽃내음", size: 30))
+                            .font(Font.custom("나눔손글씨 꽃내음", size: 30))
                             .fontWeight(.semibold)
                             .foregroundStyle(.black)
-                    
-                }
+                    }
+                } else { Text("\(value.day)").hidden() }
             }
         }
         .padding()

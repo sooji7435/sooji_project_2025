@@ -13,7 +13,6 @@ struct myMedicine: View {
     var body: some View {
             ScrollView(.horizontal) {
                 HStack {
-                    
                     Button(action: {}) {
                         VStack {
                             Image(systemName: "plus")
@@ -32,6 +31,7 @@ struct myMedicine: View {
                     MedicineIconView()
                 }
             }
+            .padding()
             .navigationTitle(Text("내 일정"))
         }
     }
